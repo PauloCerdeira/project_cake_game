@@ -1,4 +1,4 @@
-[gd_scene load_steps=203 format=2]
+[gd_scene load_steps=205 format=2]
 
 [ext_resource path="res://Resources/Textures/Daco_4142991.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/SphereDeadZone.gd" type="Script" id=2]
@@ -980,13 +980,68 @@ font_data = ExtResource( 8 )
 [sub_resource type="Theme" id=193]
 default_font = SubResource( 194 )
 
+[sub_resource type="Animation" id=195]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=196]
+resource_name = "madeMistake"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rect_rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -15.5, 15.5, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
 [node name="World" type="Node2D"]
 script = ExtResource( 5 )
 
 [node name="Background" type="AnimatedSprite" parent="."]
-scale = Vector2( 3.59193, 3.584 )
+scale = Vector2( 3.61211, 3.62 )
 frames = SubResource( 191 )
-frame = 93
+frame = 5
 playing = true
 centered = false
 
@@ -1004,7 +1059,7 @@ scale = Vector2( 0.2, 0.2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Road/Burners/Burner_1"]
 frames = SubResource( 49 )
 animation = "Active"
-frame = 25
+frame = 37
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Road/Burners/Burner_1"]
@@ -1017,7 +1072,7 @@ scale = Vector2( 0.2, 0.2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Road/Burners/Burner_2"]
 frames = SubResource( 49 )
 animation = "Active"
-frame = 24
+frame = 36
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Road/Burners/Burner_2"]
@@ -1030,7 +1085,7 @@ scale = Vector2( 0.2, 0.2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Road/Burners/Burner_3"]
 frames = SubResource( 49 )
 animation = "Active"
-frame = 23
+frame = 35
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Road/Burners/Burner_3"]
@@ -1043,7 +1098,7 @@ scale = Vector2( 0.2, 0.2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Road/Burners/Burner_4"]
 frames = SubResource( 49 )
 animation = "Active"
-frame = 23
+frame = 35
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Road/Burners/Burner_4"]
@@ -1056,7 +1111,7 @@ scale = Vector2( 0.2, 0.2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Road/Burners/Burner_5"]
 frames = SubResource( 49 )
 animation = "Active"
-frame = 23
+frame = 35
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Road/Burners/Burner_5"]
@@ -1069,7 +1124,7 @@ scale = Vector2( 0.2, 0.2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Road/Burners/Burner_6"]
 frames = SubResource( 49 )
 animation = "Active"
-frame = 22
+frame = 34
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Road/Burners/Burner_6"]
@@ -1143,6 +1198,7 @@ margin_left = 730.0
 margin_top = 777.0
 margin_right = 818.0
 margin_bottom = 876.0
+rect_pivot_offset = Vector2( 41, 52 )
 theme = SubResource( 193 )
 text = "80x"
 align = 1
@@ -1150,6 +1206,10 @@ valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="UI/ComboCounter"]
+anims/RESET = SubResource( 195 )
+anims/madeMistake = SubResource( 196 )
 
 [connection signal="area_entered" from="Road/Burners/Burner_1" to="Road/Burners" method="_on_Burner_1_area_entered"]
 [connection signal="area_exited" from="Road/Burners/Burner_1" to="Road/Burners" method="_on_Burner_1_area_exited"]

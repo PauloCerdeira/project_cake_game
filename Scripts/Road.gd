@@ -19,7 +19,7 @@ func _process(delta):
 #			i = 3
 		else:
 #			i = 6
-			i=3
+			i=1
 		createSpheres(i)
 		sphereTimer = 0
 	
