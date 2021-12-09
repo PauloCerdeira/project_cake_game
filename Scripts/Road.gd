@@ -11,14 +11,15 @@ func _process(delta):
 	if sphereTimer > 40:
 		var x = randi() % 21
 		var i = 0
-		if x < 14:
+		if x <= 15:
 			i = 1
-		elif x <= 17:
+		elif x <= 18:
 			i = 2
-		elif x <= 19:
-			i = 3
+#		elif x <= 19:
+#			i = 3
 		else:
-			i = 6
+#			i = 6
+			i=3
 		createSpheres(i)
 		sphereTimer = 0
 	
@@ -32,4 +33,4 @@ func createSpheres(num):
 		n.position = Vector2(x,-800)
 		avaiableBurners.erase(x)
 		add_child(n)
-	print(num)
+#	print(num)

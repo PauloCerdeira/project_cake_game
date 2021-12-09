@@ -14,4 +14,5 @@ func burn():
 	var b = PRE_BURN_LIGHT.instance()
 	b.position = burnerPosition
 	get_parent().add_child(b)
+	get_node("/root/World").increaseComboCounter()
 	self.queue_free()

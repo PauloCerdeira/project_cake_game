@@ -52,7 +52,9 @@ func handleInput():
 			MadeMistake(6)
 
 func MadeMistake(burnerId):
-	 get_node("/root/World").consoleLog("made mistake in burner " + str(burnerId))
+	var world = get_node("/root/World")
+	world.consoleLog("made mistake in burner " + str(burnerId))
+	world.resetComboCounter()
 
 func _on_Burner_1_area_entered(area):
 	area.burnerPosition = $Burner_1.position
