@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bensound-dubstep.mp3-f91b651ffaa7dac74d15254445b9b8b3.mp3str"
+
+[deps]
+
+source_file="res://Resources/Music/bensound-dubstep.mp3"
+dest_files=[ "res://.import/bensound-dubstep.mp3-f91b651ffaa7dac74d15254445b9b8b3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

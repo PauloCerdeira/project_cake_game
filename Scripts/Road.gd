@@ -7,6 +7,10 @@ func _ready():
 	pass
 
 func _process(delta):
+	CreateRandomSpheres(delta)
+	print($AudioStreamPlayer.get_stream_playback())
+
+func CreateRandomSpheres(delta):
 	sphereTimer +=  delta * sphereMultiplier
 	if sphereTimer > 40:
 		var x = randi() % 21
@@ -22,7 +26,6 @@ func _process(delta):
 			i=1
 		createSpheres(i)
 		sphereTimer = 0
-	
 
 func createSpheres(num):
 #	print("num aqui: " + str(num))
