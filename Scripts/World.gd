@@ -9,6 +9,7 @@ func consoleLog(string):
 func increaseComboCounter():
 	comboCounter += 1
 	$UI/ComboCounter.text = str(comboCounter) + "x"
+	$UI/ComboCounter/AnimationPlayer.play("Increment")
 
 func resetComboCounter():
 	comboCounter = 0
