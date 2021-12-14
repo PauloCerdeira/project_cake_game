@@ -3,12 +3,14 @@ extends Node2D
 var PRE_SPHERE = preload("res://Scenes/Sphere.tscn")
 var sphereTimer = 0
 var sphereMultiplier = 100
+var audioSpectrum = AudioServer.get_bus_effect_instance(0, 0)
+
 func _ready():
 	pass
 
 func _process(delta):
 	CreateRandomSpheres(delta)
-	print($AudioStreamPlayer.get_stream_playback())
+	print(audioSpectrum)
 
 func CreateRandomSpheres(delta):
 	sphereTimer +=  delta * sphereMultiplier

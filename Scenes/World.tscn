@@ -1073,7 +1073,7 @@ script = ExtResource( 5 )
 position = Vector2( -95, -31 )
 scale = Vector2( 3.86099, 3.772 )
 frames = SubResource( 191 )
-frame = 108
+frame = 97
 playing = true
 centered = false
 
@@ -1091,7 +1091,7 @@ scale = Vector2( 0.2, 0.2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Road/Burners/Burner_1"]
 frames = SubResource( 49 )
 animation = "Active"
-frame = 32
+frame = 5
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Road/Burners/Burner_1"]
@@ -1104,7 +1104,7 @@ scale = Vector2( 0.2, 0.2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Road/Burners/Burner_2"]
 frames = SubResource( 49 )
 animation = "Active"
-frame = 31
+frame = 4
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Road/Burners/Burner_2"]
@@ -1117,7 +1117,7 @@ scale = Vector2( 0.2, 0.2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Road/Burners/Burner_3"]
 frames = SubResource( 49 )
 animation = "Active"
-frame = 30
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Road/Burners/Burner_3"]
@@ -1130,7 +1130,7 @@ scale = Vector2( 0.2, 0.2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Road/Burners/Burner_4"]
 frames = SubResource( 49 )
 animation = "Active"
-frame = 30
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Road/Burners/Burner_4"]
@@ -1143,7 +1143,7 @@ scale = Vector2( 0.2, 0.2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Road/Burners/Burner_5"]
 frames = SubResource( 49 )
 animation = "Active"
-frame = 30
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Road/Burners/Burner_5"]
@@ -1156,7 +1156,7 @@ scale = Vector2( 0.2, 0.2 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="Road/Burners/Burner_6"]
 frames = SubResource( 49 )
 animation = "Active"
-frame = 29
+frame = 2
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Road/Burners/Burner_6"]
