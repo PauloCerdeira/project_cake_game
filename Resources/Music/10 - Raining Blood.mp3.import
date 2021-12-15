@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/10 - Raining Blood.mp3-fde0eeea05a1f4612794921fd4eefbf6.mp3str"
+
+[deps]
+
+source_file="res://Resources/Music/10 - Raining Blood.mp3"
+dest_files=[ "res://.import/10 - Raining Blood.mp3-fde0eeea05a1f4612794921fd4eefbf6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
